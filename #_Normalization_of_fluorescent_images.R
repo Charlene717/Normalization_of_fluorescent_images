@@ -7,11 +7,16 @@ img <- readImage("your_image_file")
 
 
 ## 選取背景區域： 選擇圖像上無細胞的地方並抓取螢光值可以手動進行，或者如果能夠確定這些區域的大概位置和大小，也可以用程式自動選取。
+## 手動抓點
+display(img)
+
+# Replace x, y, width, height with your coordinates
+subimg <- img[y:(y+height), x:(x+width)]
+background_value <- mean(subimg)
 
 
 
 ## 計算背景螢光平均值： 您可以將所有選取的背景區域的螢光值取平均，得到一個代表性的背景螢光值。
-background_values <- c() # Placeholder for your background values
 average_background <- mean(background_values)
 
 
